@@ -143,13 +143,17 @@ input {
   color: #66758f;
 }
 
-.ttt-board {
-  width: fit-content;
+@media (max-width: 640px) {
+  .other-controls {
+    margin-left: 0;
+  }
+
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.board-row {
-  display: flex;
-}
+.ttt-board { width: fit-content; }
 
 .square {
   width: 100px;
@@ -161,12 +165,6 @@ input {
   cursor: pointer;
 }
 
-@media (max-width: 640px) {
-  .other-controls {
-    margin-left: 0;
-  }
-
-  .user-grid {
-    grid-template-columns: 1fr;
-  }
+.board-row {
+  display: flex;
 }
